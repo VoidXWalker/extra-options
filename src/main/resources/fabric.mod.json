@@ -14,11 +14,7 @@
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "me.voidxwalker.options.extra.Main"
-    ]
-  },
+
   "mixins": [
     "extra_options.mixins.json"
   ],
