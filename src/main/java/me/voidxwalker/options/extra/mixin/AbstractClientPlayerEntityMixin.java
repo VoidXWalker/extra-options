@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AbstractClientPlayerEntity.class)
 public class AbstractClientPlayerEntityMixin {
-    @Inject(method = "getSpeed",at = @At(value = "RETURN"),cancellable = true)
-    public void extra_options_getSpeed(CallbackInfoReturnable<Float> cir){
-        cir.setReturnValue(MathHelper.lerp(((GameOptionsAccess)MinecraftClient.getInstance().options).extra_options_getFOVEffectScale(), 1.0F, cir.getReturnValue()));
+    @Inject(method = "getSpeed", at = @At(value = "RETURN"), cancellable = true)
+    public void extra_options_getSpeed(CallbackInfoReturnable<Float> cir) {
+        cir.setReturnValue(MathHelper.lerp(((GameOptionsAccess) MinecraftClient.getInstance().options).extra_options_getFOVEffectScale(), 1.0F, cir.getReturnValue()));
     }
 }
