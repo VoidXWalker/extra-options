@@ -18,12 +18,12 @@ public abstract class SplashScreenMixin extends Overlay {
     @Shadow @Final private MinecraftClient client;
     @Unique private static final int extra_options_MOJANG_RED = BackgroundHelper.ColorMixer.getArgb(255, 239, 50, 61);
     @Unique private static final int extra_options_MONOCHROME_BLACK = BackgroundHelper.ColorMixer.getArgb(255, 0, 0, 0);
-    @Unique private static final IntSupplier extra_options_BRAND_ARGB = () -> ((GameOptionsAccess)MinecraftClient.getInstance().options).extra_options_getMonochromeLogo()? extra_options_MONOCHROME_BLACK : extra_options_MOJANG_RED;
-    @Inject(method = "render",at=@At(value="INVOKE",target = "Lnet/minecraft/client/util/Window;getScaledWidth()I" ,shift = At.Shift.AFTER,ordinal = 1))
-    public void fill(int mouseX, int mouseY, float delta, CallbackInfo ci){
+    @Unique private static final IntSupplier extra_options_BRAND_ARGB = () -> ((GameOptionsAccess) MinecraftClient.getInstance().options).extra_options_getMonochromeLogo()? extra_options_MONOCHROME_BLACK : extra_options_MOJANG_RED;
+    
+    @Inject(method = "render", at=@At(value = "INVOKE", target = "Lnet/minecraft/client/util/Window;getScaledWidth()I", shift = At.Shift.AFTER, ordinal = 1))
+    public void fill(int mouseX, int mouseY, float delta, CallbackInfo ci) {
         int i = this.client.window.getScaledWidth();
         int j = this.client.window.getScaledHeight();
         fill(0, 0, i, j, extra_options_BRAND_ARGB.getAsInt());
     }
-
 }
