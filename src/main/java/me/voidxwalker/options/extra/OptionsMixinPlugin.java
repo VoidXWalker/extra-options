@@ -58,7 +58,7 @@ public class OptionsMixinPlugin implements IMixinConfigPlugin{
 
         try (Writer writer = new FileWriter(file)) {
             writer.write("# This is the configuration file for ExtraOptions.\n");
-            writer.write("# Please open a ticket in the official minecraft java edition discord server if you want to use this mod for speedrunning: \n");
+            writer.write("# Please open a ticket in the official Minecraft Java Edition Discord server if you want to use this mod for speedrunning: \n");
             writer.write("# https://discord.gg/jmdFn3C\n");
             writer.write("#\n");
             writer.write("reducedFOVEffects:false\n");
