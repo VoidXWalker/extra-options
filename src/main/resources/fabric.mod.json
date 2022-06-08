@@ -3,22 +3,22 @@
   "id": "extra_options",
   "version": "1.0.0",
   "name": "ExtraOptions",
-  "description": "Adds the 1.17 options of a monochrome logo, reduced distortion effects and reduced fov effects",
+  "description": "Adds the 1.17 options of reduced distortion effects and reduced fov effects",
   "authors": [
     "Void_X_Walker"
   ],
   "contact": {
     "repo": "https://github.com/VoidXWalker/ExtraOptions"
   },
-  "license": "All-Rights-Reserved",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/extra-options/icon.png",
 
-  "environment": "*",
+  "environment": "client",
 
   "mixins": [
     "extra_options.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.7.4"
+    "fabricloader": ">=0.12.0"
   }
 }

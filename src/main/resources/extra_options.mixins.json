@@ -3,12 +3,11 @@
   "minVersion": "0.8",
   "package": "me.voidxwalker.options.extra.mixin",
   "compatibilityLevel": "JAVA_8",
+  "plugin": "me.voidxwalker.options.extra.OptionsMixinPlugin",
   "client": [
-    "AbstractClientPlayerEntityMixin",
-    "AccessibilityOptionsScreenMixin",
-    "GameOptionsMixin",
-    "GameRendererMixin",
-    "SplashScreenMixin"
+    "AbstractClientPlayerEntityMixinFOV",
+    "GameRendererMixinDistortion",
+    "GameRendererMixinFOV"
   ],
   "injectors": {
     "defaultRequire": 1
